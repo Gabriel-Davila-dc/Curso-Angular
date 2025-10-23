@@ -1,0 +1,9 @@
+.quadro {
+    display: grid;
+    gap: 20px;
+    border: 2px solid #000;
+    padding: 30px;
+}
+h1 { 
+    justify-self: center;
+}

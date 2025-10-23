@@ -1,0 +1,8 @@
+<div class="class">
+    <p>if-render Funcionando 100%</p>
+<h1 *ngIf="canShow">Mostrando a div</h1>
+<h2 *ngIf="name === 'Gabriel'; else divDeOutro">O dono do Código se chama {{ name }} e é um ótimo programador</h2>
+<ng-template #divDeOutro>
+  <h2>O dono do Código não se chama Gabriel e não é você</h2>
+</ng-template>
+</div>
