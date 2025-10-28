@@ -1,7 +1,10 @@
 <div class="class">
-    <p>Animais</p>
+    <h1>Animais</h1>
     <ul>
-        <li *ngFor = "let animal of animals" >Nome: {{animal.name}} || {{animal.type}} || <img [src]="animal.foto" alt="{{animal.name}}" /></li>
-
+        <li *ngFor = "let animal of animals" >Nome: {{animal.name}} 
+           <p> <button (click)="showDetails(animal)">Detalhes</button>
+            <button (click)="removeAnimal(animal)">Remover</button></p>
+        </li>
     </ul>
+    <h2>{{ animalDetails }}</h2>
 </div>

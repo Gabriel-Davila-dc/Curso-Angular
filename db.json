@@ -1,0 +1,9 @@
+{
+    "animals": [
+        {"id":1, "name":"Cotoca", "type":"Dog", "age":3},
+        {"id":2, "name":"Mingau", "type":"Cat", "age":2},
+        {"id":3, "name":"Nemo", "type":"Fish", "age":1},
+        {"id":4, "name":"Tweety", "type":"Bird", "age":4},
+        {"id":5, "name":"Thumper", "type":"Rabbit", "age":2}
+    ]
+}

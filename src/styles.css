@@ -17,7 +17,26 @@ body {
     padding: 2em;
 }
 
-a{
+nav a{
     text-decoration: none;
-    color: rgb(241, 137, 0);
+    margin-right: 15px;
+    font-weight: bold;
+    color: white;
+    background: rgb(146, 223, 5)  ;
+    padding: 5px;
+    border-radius: 18px;
+    margin: 7px;
+}
+nav a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+nav{
+    margin-bottom: 20px;
+    background-color: rgb(50, 50, 50);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto ;
+    justify-content: space-evenly;
+    
 }

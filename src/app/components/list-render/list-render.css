@@ -1,4 +1,4 @@
-p {
+h1 {
     color: rgb(255, 255, 255);
     font-size: 30px;
     text-align: center;
@@ -44,7 +44,6 @@ li:hover{
     filter: brightness(100%);
     list-style-type: square;
     list-style-position: inside;
-    list-style-image: url('https://i.pinimg.com/736x/18/77/c1/1877c1d0a95b637e16aae59c986e5489.jpg');
     list-style-type: none;
     youter-box-shadow: 0 0 10px rgb(159, 216, 4);
 }

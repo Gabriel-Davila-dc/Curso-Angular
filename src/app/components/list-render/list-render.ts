@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Animal } from '../../Animal';
+import { List } from '../../services/list'; 
 
 @Component({
   selector: 'app-list-render',
@@ -9,11 +11,23 @@ import { Component } from '@angular/core';
 })
 export class ListRender {
 
-  animals = [
-    { name: 'Cotoca', type: 'Dog', foto: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Drawing-of-a-Dog-Home-400-x-400-1.webp'},
-    { name: 'Gato de botas', type: 'Cat', foto: 'https://cdn.wamiz.fr/cdn-cgi/image/format%3Dauto%2Cquality%3D80%2Cwidth%3D430%2Cheight%3D241.875%2Cfit%3Dcover/article/main-picture/5c9366e568c40874814030.jpg' },
-    { name: 'Parrot', type: 'Bird', foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/House_sparrow04.jpg/400px-House_sparrow04.jpg' },
-    { name: 'Goldfish', type: 'Fish', foto: 'https://cdn.awsli.com.br/1845/1845715/produto/223193791/img_5837-jjkmghdktx.jpeg' }
-  ];
+  animals: Animal[] = [];
 
+  animalDetails: string = '';
+
+  constructor(private list: List) {
+    this.getAnimals()
+  }
+
+  showDetails(animal: Animal) {
+    this.animalDetails = `Esse ${animal.type} se chama ${animal.name} e tem ${animal.age} anos.`;
+  }
+
+  removeAnimal(animal: Animal) {
+    this.animals = this.list.remove(this.animals, animal);
+  }
+
+  getAnimals(): void {
+    this.list.getAll().subscribe((animals) => (this.animals = animals));
+  }
 }
