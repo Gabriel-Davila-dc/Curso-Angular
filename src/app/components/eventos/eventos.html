@@ -1,0 +1,9 @@
+<p>eventos works!</p>
+<div class="class">
+    <p [ngClass]="classeP">Teste 1</p>
+
+    <p *ngIf="show" [ngClass]="classeP">Exibindo mensagem!</p>
+    <button (click)="showMessage()" [ngClass]="classeP">Clique em mim</button>
+    <button (click)="organizar()" [ngClass]="classeP">Organizar</button>
+    <p [ngClass]="classeP">{{sobre}}</p>
+</div>

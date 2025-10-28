@@ -1,0 +1,7 @@
+<div class="class">
+    <p>Animais</p>
+    <ul>
+        <li *ngFor = "let animal of animals" >Nome: {{animal.name}} || {{animal.type}} || <img [src]="animal.foto" alt="{{animal.name}}" /></li>
+
+    </ul>
+</div>
