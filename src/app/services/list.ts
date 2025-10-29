@@ -11,12 +11,8 @@ export class List {
   constructor(
     private http: HttpClient) { }
 
-  remove(animais:Animal[], animal: Animal) {
-    const index = animais.indexOf(animal); //pega o index do animal
-    if (index > -1) { //se encontrou o animal
-      animais.splice(index, 1); //remove o animal do array
-    }
-    return animais;
+  remove(id: number) {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
   
   getAll(): Observable<Animal[]> {

@@ -24,7 +24,8 @@ export class ListRender {
   }
 
   removeAnimal(animal: Animal) {
-    this.animals = this.list.remove(this.animals, animal);
+    this.animals = this.animals.filter((a) => animal.name !== a.name); //só pro front
+     this.list.remove( animal.id).subscribe(); //pro back
   }
 
   getAnimals(): void {
