@@ -63,4 +63,12 @@ ul:active{
     box-shadow: 0 0 10px rgb(159, 216, 4);
 
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(221, 255, 193);
+}
 

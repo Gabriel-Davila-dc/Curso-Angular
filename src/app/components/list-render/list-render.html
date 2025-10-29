@@ -1,7 +1,7 @@
 <div class="class">
     <h1>Animais</h1>
     <ul>
-        <li *ngFor = "let animal of animals" >Nome: {{animal.name}} 
+        <li *ngFor = "let animal of animals" >Nome:<a href="/list/{{animal.id}}"> {{animal.name}}</a> 
            <p> <button (click)="showDetails(animal)">Detalhes</button>
             <button (click)="removeAnimal(animal)">Remover</button></p>
         </li>
